@@ -2,51 +2,90 @@ body {
     background-color: #defdf1;
 }
 
-form {
-    width: 20em;
-    height: 20em;
-    margin: 0 auto;
+.outerForm {
     display: block;
-    margin-top: 16em;
-    border: 1px outset black
+    border: 1px outset #578e3e;
+    margin-top: 15em;
+    margin-left: 42em;
+    width: 24em;
+    height: 22em;
 }
-div {
+.innerBox {
     margin-left: 1.4em;
     margin-top: 2em;
 }
-input {
-    margin-bottom: 5px;
-    height: 2em;
-    width: 20em;
+.inputClass {
+    height: 2em ;
+    width: 25em;
+    margin-bottom: 10px;
 }
-button {
+.buttonClass {
     color: #417634;
     text-align: center;
-    border: 1px outset grey;
-    height: 2.4em;
-    width: 20.6em;
+    border: 2px outset grey;
+    height: 2.5em;
+    width: 25.6em;
     cursor: pointer;
     margin-bottom: 5px;
     opacity: 0.6;
     background-color: #cfe7d9;
+    
 }
 
-button:hover {
+.buttonClass:hover {
     opacity: 1;
-    background-color: #417634;
-    color: white;
+    background-color: #558d3d;
+    color: #c4e3ca;
 }
 
-select {
-    opacity: 0.6;
-    height: 2.4em;
-    width: 20.6em;
+.selectClass {
     cursor: pointer;
-    border: 1px outset grey;
-    margin-bottom: 5px;
     background-color: white;
+    height: 2.5em;
+    width: 25.6em;
+    margin-bottom: 10px;
+}
+#hover {
+    border: 2px outset #bbc9ba
+}
+#hover:hover {
+    border: 2px outset #79a06b
 }
 
-#hover:hover {
-    border: 2px outset #417634
+@media  only screen and (max-width: 1500px) and (min-width: 1200px) {
+    .outerForm {
+        margin-top: 15em;
+        margin-left: 31em;
+    }
+   
+}
+
+@media  only screen and (max-width: 1199px) and (min-width: 1000px) {
+    .outerForm {
+        margin-top: 15em;
+        margin-left: 26em;
+    }
+  
+}
+
+@media  only screen and (max-width: 999px) and (min-width: 700px) {
+    .outerForm {
+        margin-top: 15em;
+        margin-left: 16em;
+    }
+  
+}
+@media  only screen and (max-width: 699px) and (min-width: 500px) {
+    .outerForm {
+        margin-top: 15em;
+        margin-left: 7em;
+    }
+  
+}
+@media  only screen and (max-width: 499px)  {
+    .outerForm {
+        margin-top: 15em;
+        margin-left: 1.8em;
+    }
+  
 }

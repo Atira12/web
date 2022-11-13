@@ -1,0 +1,201 @@
+div.header {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    align-self: center;
+    margin-bottom: 1em;
+    
+}
+div.innerMain {
+    margin-left: 20em;
+}
+h2.head {
+    font-size: 3em;
+}
+
+body p {
+    margin-right: 5em;
+}
+div.gridSingleAndMargin {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    align-self: center;
+    margin-bottom: 5em;
+    margin-left: 20em;
+}
+div.matcherType {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    align-self: center;
+    margin-bottom: 1em;
+}
+div.matcherTypeImage {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    align-self: center;
+    margin-bottom: 1em;
+    margin-left: 30em;
+    height: 25em;
+    width: 30em;
+    margin-top: 3em;
+}
+div.matcherTypeImage p {
+    text-align: center;
+}
+div.matcherTypeImage2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    align-self: center;
+    margin-bottom: 1em;
+    margin-left: 30em;
+    height: 10em;
+    width: 30em;
+    margin-top: 2em;
+}
+
+div.matcherTypeImage2 p {
+    text-align: center;
+}
+
+div.matcherTypeImage1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto; 
+    align-self: center;
+    margin-bottom: 1em;
+    margin-left: 10em;
+    margin-top: 2em;
+    height: 25em;
+    width: 35em;
+    gap: 20em;
+    text-align: center;
+}
+div.matcherTypeImage4 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto; 
+    align-self: center;
+    margin-bottom: 1em;
+    margin-left: 10em;
+    margin-top: 2em;
+    height: 25em;
+    width: 35em;
+    gap: 20em;
+    text-align: center;
+}
+.smallImage {
+    margin-top: 3em;
+}
+
+li.functionList {
+    margin-bottom: 1em;
+}
+li.functionList::marker {
+    content: ' ○ ';
+    
+}
+li.matcherTypeList { 
+    margin-bottom: 2em;  
+}
+
+
+@media only screen and (max-width: 1640px) and (min-width: 1300px){
+    div.matcherTypeImage1 {
+        gap: 5em;
+        margin-left: 1em;
+    }
+    div.matcherTypeImage {
+        margin-left: 17em;
+    }
+    div.matcherTypeImage2 {
+        margin-left: 10em;
+    }
+    div.matcherTypeImage4 {
+        gap: 5em;
+        margin-left: 1em;
+    }
+}
+
+@media only screen and (max-width: 1299px) and (min-width: 950px){
+    div.matcherTypeImage1 {
+        gap: 5em;
+        margin-left: 1em;
+        grid-template-columns: auto;
+        margin-bottom: 20em;
+    }
+    div.matcherTypeImage {
+        margin-left: 5em;
+    }
+    div.matcherTypeImage2 {
+        margin-left: 5em;
+    }
+    div.matcherTypeImage4 {
+        gap: 5em;
+        margin-left: 1em;
+        grid-template-columns: auto;
+        margin-bottom: 10em;
+    }
+    div.innerMain {
+        margin-left: 15em;
+    }
+    div.gridSingleAndMargin {
+        margin-left: 15em;
+    }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 800px) {
+    div.matcherTypeImage1 {
+        gap: 5em;
+        margin-left: 1em;
+        grid-template-columns: auto;
+        margin-bottom: 20em;
+    }
+    div.matcherTypeImage {
+        margin-left: 5em;
+    }
+    div.matcherTypeImage2 {
+        margin-left: 5em;
+    }
+    div.matcherTypeImage4 {
+        gap: 5em;
+        margin-left: 1em;
+        grid-template-columns: auto;
+        margin-bottom: 10em;
+    }
+    div.innerMain {
+        margin-left: 15em;
+    }
+    div.gridSingleAndMargin {
+        margin-left: 13.5em;
+    }
+}
+@media only screen and (max-width: 799px) {
+    div.matcherTypeImage1 {
+        gap: 5em;
+        margin-left: 1em;
+        grid-template-columns: auto;
+        margin-bottom: 20em;
+    }
+    div.matcherTypeImage {
+        margin-left: 5em;
+    }
+    div.matcherTypeImage2 {
+        margin-left: 5em;
+    }
+    div.matcherTypeImage4 {
+        gap: 5em;
+        margin-left: 1em;
+        grid-template-columns: auto;
+        margin-bottom: 10em;
+    }
+    div.innerMain {
+        margin-left: 3em;
+    }
+    div.gridSingleAndMargin {
+        margin-left: 3em;
+    }
+}

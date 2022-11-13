@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="hw2.css" />
+    <link rel="stylesheet" href="styles/hw2.css" />
 </head>
 <body>
-    <form>
-        <div>
-            <input id="hover" type="text" placeholder="Потребителско име" />
-            <input id="hover" type="password" placeholder="Парола"/>
-            <input id="hover" type="tel" placeholder="Телефон"/>
-            <input id="hover" type="email" placeholder="Емайл адрес" />
-            <select id="hover" name="Test" >
+    <form class="outerForm">
+        <div class="innerBox">
+            <input class="inputClass" id="hover" type="text" placeholder="Потребителско име" />
+            <input class="inputClass" id="hover" type="password" placeholder="Парола"/>
+            <input class="inputClass" id="hover" type="tel" placeholder="Телефон"/>
+            <input class="inputClass" id="hover" type="email" placeholder="Емайл адрес" />
+            <select class="selectClass" id="hover" name="Test" >
                 <option value="owner">Собственик</option>
                 <option value="tenant">Наемател</option>
             </select>
-            <input id="hover" type="text" placeholder="Номер на апартамент" />
-            <button class="squarable" type="submit" >Регистрирай ме!</button>
+            <input id="hover" class="inputClass" type="number" placeholder="Номер на апартамент" />
+            <button class="buttonClass" type="submit" >Регистрирай ме!</button>
         </div>
     </form>
 </body>

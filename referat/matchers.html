@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/sidebar.css">
+<link rel="stylesheet" href="styles/matchers.css">
+</head>
+<body>
+
+    <div class="sidebar">
+      <a  href="./index.html">Начало</a>
+      <a href="./config.html">Конфигурация</a>
+      <a class="active" href="./matchers.html">Проверка на съвпадения</a>
+      <a href="./mocking.html">Мокинг</a>
+      <a href="#about">Ресурси</a>
+    </div>
+    <div class="header">
+        <div class="innerMain">
+     
+            <h2 class="head">Проверка на съвпаденията</h2>
+            <p>
+                 Системната рамка използва ключова функция <b>expect</b> за дефиниране на нова проверка на съвпадение.  
+                 За тестване на опрделена ситуация от потребителска гледна точка JestJS предоставя методи наречени "проверки на съвпадения" (Matchers). 
+            </p>
+            <p>  Този вид методи спомагат тестването на обширен брой ситуации <u>свързани с моментното състояние на уеб компонент или тяхната логика </u>.</p>
+            <p>
+                <b>JestJS</b> следи броя и позициите на провалените тестови функции <b>expect</b> и техните проверки на съвпадение. Събраната информация бива изведена в резюмирана форма след приключване.
+            </p>
+            <p>
+                <b>expect</b> приема променлива от всякакъв тип и прилага избраните от потребителя проверки за съвпадение. 
+
+            </p>
+            <h3>
+                Видове проверки на съвпадение:
+            </h3>
+        </div>
+    </div>
+    <div class="gridSingleAndMargin">
+        <ul>
+            <li> 
+                <div class="matcherType">
+                    <h4>Често използвани</h4>
+                    <p>Този вид методи се използва предимно за проверка на еквивалентност по брой проверки или състояние. </p>
+                    <div>
+                        <ul>
+                            <li><b>toBe()</b>
+                                <p>
+                                    Mетодът <b>toBe</b> предоставя възможност на потребителите да сравнят различни обекти по тип , референция и стойност.
+                                    Този метод предимно се ползва за сравнение на примитивни типове. Системната рамка предоставя метод <b>ToEqual</b> за обекти и други структури от данни. 
+                                </p>
+                                <p class="underlined">
+                                    Методът работи на база <b>Object.is</b> 
+                                </p>
+                                <div class="matcherTypeImage">
+                                    <img src="images/tobe.png"  alt="Italian Trulli" />
+                                    <p>[1]: Image Info</p>
+                                </div>
+                            </li>
+                            <li><b>hasAssertions() & assertions()</b>
+                                <p class="noMarginBottom">
+                                    Mетодът <b>hasAssertions()</b> предоставя възможност да се провери дали поне един <b>expect</b> тестови метод е изпълнен в дадена тестова функция.
+                                </p>
+                                <p class="noMargin">    
+                                    <u>При ненамерени тестови проверки се счита теста за неуспешен</u> 
+                                </p>
+                                <p class="noMarginBottom">
+                                    Подобен метод на предходния е <b>assertions()</b>, който спомага проверката на броя изпълнени  <b>expect</b> тестови метода
+                                </p>
+                                <p class="noMargin underlined">
+                                    При ненамерен oпределен брой тестови проверки, теста се счита теста за неуспешен 
+                                </p>
+                                <p>
+                                    Добра практика при JestJS тестване е да се използват двата метода. По този начин потребителя може да се подсигури, че всички <b>expect</b>  тестови методи 
+                                    са дефинирани и изпълнени успешно 
+                                </p>
+                                <div class="matcherTypeImage1">
+                                    <div>
+                                        <img src="images/assertions.png"  alt="Italian Trulli" />
+                                        <p>[1]: Image Info</p>
+                                    </div>
+                                    <div class="smallImage">
+                                        <img src="images/hasassertions.png"  alt="Italian Trulli" />
+                                        <p>[1]: Image Info</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><b>toBeUndefined & toBeNull</b>
+                                <p>
+                                    В <b>JavaScript</b> има дефиниционна разлика между <b>Null</b>  и <b>Undefined</b>.  
+                                </p>
+                                <p class="noMargin">
+                                    За <b>Undefined</b> се счита обект, който не е дефиниран и не съществува, а ако един обект е дефиниран като <b>Null</b> той съществува, но е оприличен на празен обект. 
+                                </p>
+                                <p class="noMargin" >
+                                    Mетоди <b>toBeUndefined</b> предоставя възможност да се провери дали предоставените данни са недефинирани.
+                                </p>
+                                <p>
+                                    <u><b>toBeNull</b> е семантично еквивалентен на метода <b>toBe(null)</b> </u>
+                                </p>
+                                <div class="matcherTypeImage4">
+                                    <div>
+                                        <img src="images/undefined.png"  alt="Italian Trulli" />
+                                        <p>[1]: Image Info</p>
+                                    </div>
+                                    <div class="smallImage">
+                                        <img src="images/null.png"  alt="Italian Trulli" />
+                                        <p>[1]: Image Info</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><b>not</b>
+                                <p>
+                                    Подструктурата <b>not</b> се използва като прикачено отрицание към всеки метод за проверка на съвпадения.
+                                </p>
+                                <p>
+                                    Всеки метод като <b>toBe</b> може да бъде конкатениран с <b>not</b> за валидиране на стойности различни от подадената.
+                                </p>
+                                <div class="matcherTypeImage2">
+                                    <img src="images/not.png"  alt="Italian Trulli" />
+                                    <p>[1]: Image Info</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="matcherType">
+                    <h4>Стриктно типизирани</h4>
+                    <p> 
+                        Долуспоменатите методи позволяват на потребителя да създаде проверки специално дефинирани за опеделния тип или структура данни. 
+                    </p>
+                    <ul>
+                        <li class="matcherTypeList">
+                            <h5>Числени проверки</h5>
+                            <p>
+                                Този тип методи са предназначени за проверка или сравнение на числени стойности.
+                                Съществуват четири основни метода от този тип. Те са еквивалентни на булевите операции 
+                                <b>&lt;</b>  &ThickSpace; <b>&gt;</b>  &ThickSpace; <b>&leq;</b> &ThickSpace; <b>&GreaterEqual;</b>  
+                            </p>
+                            <ul >
+                                <li class="functionList">
+                                    <b>toBeGreaterThan</b>
+                                </li>
+                                <li class="functionList">
+                                    <b>toBeGreaterThanOrEqual</b>
+                                </li>
+                                <li class="functionList">
+                                    <b>toBeLessThan</b>
+                                </li>
+                                <li class="functionList">
+                                    <b>toBeLessThanOrEqual</b>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Низови проверки</h5>
+                            <p>
+                                Съществуват три основни метода за проверка на низове. 
+                                <br/>
+                                Всеки един от тях позволява употреба на <b>regex</b> синтаксис за намиране на съответствие.
+                            </p>
+                            <ul>
+                                <li>
+                                    <h5><b>toMatch</b></h5>
+                                    <p class="liDescription">
+                                        Методът се използва за проверка на съществуването на определен подниз или regex в друг низ.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5><b>stringContaining</b></h5>
+                                    <p class="noMarginBottom">
+                                        Методът се използва за проверка на съществуването на <u>стриктно</u> подадения низ в друг низ.
+                                    </p>
+                                    <p class="noMargin">
+                                        Работи единствено за подадени низове
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5><b>stringMatching</b></h5>
+                                    <p class="noMarginBottom">
+                                        Методът се използва за проверка на съществуването на <u>стриктно</u> подадения низ в друг низ.
+                                    </p>
+                                    <p class="noMargin">
+                                        Работи единствено за подадени низове
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Проверки върху итерационни структури</h5>
+                            <p class="noMarginBottom">
+                                Главният методи използвани за проверка на съдържание на масив, лист и други итерационни структури е <b>toContain</b> и <b>toContainEqual</b>
+                            </p>
+                            <ul>
+                                <li>
+                                    <p class="noMarginBottom">
+                                        <b>toContain</b> позволява на потребителя да провери дали подадения обект е част от определената итерационна структура.
+                                    </p>
+                                    <p class="noMargin underlined">
+                                        Mетодът за проверка използва тройно равенство, за да подсигури валидна типизация
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="noMarginBottom">
+                                        <b>toContainEqual</b> позволява на потребителя наличието на подадения обект в итерационната структура.
+                                    </p>
+                                    <p class="noMargin underlined">
+                                        Mетодът рекурсивно минава през структурата на всеки обект и проверя за съответствия.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</body>

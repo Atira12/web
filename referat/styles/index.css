@@ -1,0 +1,91 @@
+div.main {
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: 300px auto auto; 
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-left: 5em ;
+    margin-top: 20em;
+}
+div.header {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    align-self: center;
+    margin-bottom: 5em;
+    
+}
+div.innerMain {
+    margin-left: 20em;
+
+}
+h1.header {
+    text-align: center;
+    font-size: 6em;
+}
+div.keyPoints {
+    display: grid;
+    grid-template-rows: 30em 30em;
+
+}
+div.mainText p {
+    margin-left: 2em;
+}
+div.mainText {
+    display: grid;
+    grid-template-rows: auto;
+    margin-left: 20em;
+}
+div.keyContent {
+    height: 30em;
+    text-align: center;
+}
+div.header p {
+    margin-right: 20em ;
+}
+.innerMainPar {
+    margin-left: 2em;
+}
+
+@media  only screen and (max-width: 1100px) and (min-width: 800px){ 
+    div.keyContent {
+        margin-left: 15em;
+        padding: 1px 16px;
+        height: 30em;
+        margin-bottom: 17em;
+        text-align: center;
+    }
+    div.keyContent  img{ 
+        width: 30em;
+    }
+    div.header p {
+        margin-right: 10em ;
+    }
+    div.main {
+        margin-top: 10em;
+    }
+}
+
+@media  only screen and (max-width: 799px) { 
+    div.keyContent {
+        margin-left: 5em;
+        padding: 1px 16px;
+        height: 30em;
+        margin-bottom: 17em;
+        text-align: center;
+    }
+    div.keyContent  img{ 
+        width: 30em;
+    }
+    div.header p {
+        margin-right: 5em ;
+    }
+    div.main {
+        margin-top: 10em;
+    }
+
+    div.innerMain {
+        margin-left: 10em;
+    
+    }
+}
