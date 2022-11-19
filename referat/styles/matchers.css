@@ -60,7 +60,6 @@ div.matcherTypeImage2 {
 div.matcherTypeImage2 p {
     text-align: center;
 }
-
 div.matcherTypeImage1 {
     display: grid;
     grid-template-columns: auto auto;
@@ -71,7 +70,7 @@ div.matcherTypeImage1 {
     margin-top: 2em;
     height: 25em;
     width: 35em;
-    gap: 20em;
+    gap: 10em;
     text-align: center;
 }
 div.matcherTypeImage4 {
@@ -84,7 +83,7 @@ div.matcherTypeImage4 {
     margin-top: 2em;
     height: 25em;
     width: 35em;
-    gap: 20em;
+    gap: 10em;
     text-align: center;
 }
 .smallImage {
