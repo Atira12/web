@@ -12,7 +12,7 @@
       <a href="./config.html">Конфигурация</a>
       <a class="active" href="./matchers.html">Проверка на съвпадения</a>
       <a href="./mocking.html">Мокинг</a>
-      <a href="#about">Ресурси</a>
+      <a href="./resources.html">Ресурси</a>
     </div>
     <div class="header">
         <div class="innerMain">
@@ -46,14 +46,16 @@
                             <li><b>toBe()</b>
                                 <p>
                                     Mетодът <b>toBe</b> предоставя възможност на потребителите да сравнят различни обекти по тип , референция и стойност.
-                                    Този метод предимно се ползва за сравнение на примитивни типове. Системната рамка предоставя метод <b>ToEqual</b> за обекти и други структури от данни. 
+                                    Този метод предимно се ползва за сравнение на примитивни типове и проверка на идентичност . Системната рамка предоставя метод <b>ToEqual</b> за обекти и други структури от данни. 
                                 </p>
                                 <p class="underlined">
                                     Методът работи на база <b>Object.is</b> 
                                 </p>
                                 <div class="matcherTypeImage">
                                     <img src="images/tobe.png"  alt="Italian Trulli" />
-                                    <p class="imageText">[1]: Image Info</p>
+                                    <p>
+                                        <a href="https://jestjs.io/docs/expect#tobevalue" target="_blank" >[2]</a>: Примерна имплементация на toBe метод
+                                    </p>
                                 </div>
                             </li>
                             <li><b>hasAssertions() & assertions()</b>
@@ -76,11 +78,15 @@
                                 <div class="matcherTypeImage1">
                                     <div>
                                         <img src="images/assertions.png"  alt="Italian Trulli" />
-                                        <p class="imageText">[1]: Image Info</p>
+                                        <p>
+                                            <a href="https://jestjs.io/docs/expect#expectassertionsnumber" target="_blank" >[3]</a>: Имплементация на "assertions" метод за проверка
+                                        </p>
                                     </div>
                                     <div class="smallImage">
                                         <img src="images/hasassertions.png"  alt="Italian Trulli" />
-                                        <p class="imageText">[1]: Image Info</p>
+                                        <p>
+                                            <a href="https://jestjs.io/docs/expect#expecthasassertions" target="_blank" >[3]</a>: Имплементация на "hasAssertions" метод за проверка
+                                        </p>
                                     </div>
                                 </div>
                             </li>
@@ -203,7 +209,7 @@
                                 </li>
                                 <li>
                                     <p class="noMarginBottom">
-                                        <b>toContainEqual</b> позволява на потребителя наличието на подадения обект в итерационната структура.
+                                        <b>toContainEqual</b> позволява на потребителя да провери наличието на подадения обект в итерационната структура.
                                     </p>
                                     <p class="noMargin underlined">
                                         Mетодът рекурсивно минава през структурата на всеки обект и проверя за съответствия.

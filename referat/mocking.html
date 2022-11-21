@@ -9,7 +9,7 @@
         <a href="./config.html">Конфигурация</a>
         <a href="./matchers.html">Проверка на съвпадения</a>
         <a class="active" href="./mocking.html">Мокинг</a>
-        <a href="#about">Ресурси</a>
+        <a href="./resources.html">Ресурси</a>
     </div>
     <div class="header">
         <div class="innerMain">
@@ -43,6 +43,8 @@
                         <p class="descriptionPopupText noMarginBottom">Създава нов празен мокинг метод. При извикване на метода без предоставена имплементация ще бъде върната недефинирана стойност </p>
                         <pre class="descriptionPopupText">const myMock1 = jest.fn();</pre>
                         <pre class="descriptionPopupText">const a = new myMock1(); </pre>
+                        <p class="descriptionPopupText noMarginBottom">Възможно е добавянето на имплементация по подразбиране чрез подаване на параметър към мок функцията </p>
+                        <pre class="descriptionPopupText">const myMock1 = jest.fn(() => 42);</pre>
                     </p>
                 <li class="descriptionTextLi">
                     <p>mock
@@ -56,6 +58,13 @@
                         <pre class="descriptionPopupText"> const b = {}</pre>
                         <pre class="descriptionPopupText"> const mockObject = jest.fn()</pre>
                         <pre class="descriptionPopupText"> const s = mockObject.bind(b)</pre>
+                    </p>
+                </li>
+                <li class="descriptionTextLi">
+                    <p>spyOn
+                        <p class="descriptionPopupText">Методът създава мок функция подобно на <b>fn</b>, но предоставя възможността за наблюдение над извикванията</p>
+                        <pre class="descriptionPopupText"> // Нека имаме модул "player" с метод "start"</pre>
+                        <pre class="descriptionPopupText"> const newSpy = jest.spyOn(player, 'start')</pre>
                     </p>
                 </li>
             </ul>
@@ -95,7 +104,6 @@
                             </p>
                         </li>
                     </ul>
-
                     <p class="noMarginBottom">
                         Методите "шпиони" могат да бъгат използвани в комбинация с методи за проверка на съвпаденията. Проверките на съвпадение спомагат за тестването на системни
                         логики при предефинирани изходни данни на вложените мок методи  
@@ -105,9 +113,26 @@
                     <h4>
                         Мокинг на модули
                     </h4>
-                    <p>
-                        Мокинг функционалността също може да се използва за тестване на трудно достъпна или опакована логика
+                    <p class="noMarginBottom">
+                        Мокинг функционалността също може да се използва за тестване на трудно достъпна или опакована логика.
                     </p>
+                    <p class="noMargin">
+                        Главният метод за създаване на методи "шпиони" е <b>mock</b>. Вградената функция позволява да се създаде копие на даден модул или негова част. 
+                    </p>
+                    <p>
+                        Спомагателни методи:
+                    </p>
+                    <ul>
+                        <li class="descriptionTextLi">
+                            <p>
+                                mockImplementationOnce
+                            <p class="descriptionPopupText">Подобно на <b>mockReturnValueOnce</b>, този метод позволява да се промени имплементацията на определен модул</p>
+                            <p class="descriptionPopupText">Позицията на метода в конкатенацията дефинира на кое извикване ще бъде изпълнена предоставената имплементация</p>
+                            <pre class="descriptionPopupText">jest.mock('./method') // създаване на метод "шпионин"</pre>
+                            <pre class="descriptionPopupText">const method = require('./method') // импортиране на модул </pre>
+                            <pre class="descriptionPopupText">method.mockImplementationOnce(() => 42)</pre>
+                            </p>
+                    </ul>
                 </li>
 
             </ul>
