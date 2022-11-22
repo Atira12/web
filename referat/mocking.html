@@ -28,10 +28,9 @@
             </ul>
             <p class="noMarginBottom">
                 Мокинг функционалността също може да се използва за тестване на трудно достъпна или опакована логика
-                Мокинг обектите , още наречени мок функции или шпиони са методи, копия на предоставените функции или модули, но с гореспоменатите възможностти за промяна и наблюдение. 
-                
+                Мокинг обектите , още наречени мок функции или "шпиони", са методи копия на предоставените функции или модули, но с гореспоменатите възможностти за промяна и наблюдение. 
             </p>
-            <p class="noMargin">
+            <p >
                 Всяка мок функция притежава подметод <b>mock</b>, който съдържа информация кога методът е извикан и с каква имплементация. 
             </p>
             <p >
@@ -83,7 +82,7 @@
                     <p class="noMarginBottom">
                         Мокингът на функции предоставя възможността да се промени имплементацията или  изходното състояние.
                     </p>
-                    <p class="noMargin">
+                    <p>
                         Изходното състояние на избрания метод може да се промени веднъж или изцяло. 
                         Възможна е конкатенация на методи за промяна на изходното състояние при всяко извикване на избрания метод. 
                     </p>
@@ -95,7 +94,7 @@
                             <p>
                                 mockReturnValueOnce
                             <p class="descriptionPopupText">Позицията на метода в конкатенацията дефинира на кое извикване ще бъде върната подадената стойност</p>
-                            <pre class="descriptionPopupText">myMock.mockReturnValueOnce(10).mockReturnValueOnce('x').mockReturnValue(true)</pre>
+                            <pre class="descriptionPopupText">myMock.mockReturnValueOnce('x').mockReturnValue(true)</pre>
                             </p>
                         <li class="descriptionTextLi">
                             <p>mockReturnValue
@@ -116,7 +115,7 @@
                     <p class="noMarginBottom">
                         Мокинг функционалността също може да се използва за тестване на трудно достъпна или опакована логика.
                     </p>
-                    <p class="noMargin">
+                    <p>
                         Главният метод за създаване на методи "шпиони" е <b>mock</b>. Вградената функция позволява да се създаде копие на даден модул или негова част. 
                     </p>
                     <p>
@@ -132,6 +131,16 @@
                             <pre class="descriptionPopupText">const method = require('./method') // импортиране на модул </pre>
                             <pre class="descriptionPopupText">method.mockImplementationOnce(() => 42)</pre>
                             </p>
+                        </li>
+                        <li class="descriptionTextLi">
+                            <p>mockImplementation
+                            <p class="descriptionPopupText"> Позволява на потребителя да подмени имплементацията на метод от мокнат модул с предоставената имплементация</p>
+                            <pre class="descriptionPopupText">jest.mock('./method') // създаване на метод "шпионин"</pre>
+                            <pre class="descriptionPopupText">const method = require('./method') // импортиране на модул </pre>
+                            <pre class="descriptionPopupText">method.mockImplementation(() => 42)</pre>
+                            </p>
+
+                        </li>
                     </ul>
                 </li>
 

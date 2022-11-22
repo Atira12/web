@@ -55,3 +55,52 @@ li.descriptionTextLi:hover {
     background-color: #f6f6f6;
    
 }
+
+@media only screen and (max-width: 1050px) and (min-width: 800px){
+    div.innerMain {
+        margin-left: 13em;
+    }
+    p.descriptionPopupText {
+        margin-left: 0em;
+        opacity: 0;
+        transition: opacity 1s ease ;
+    }
+    pre.descriptionPopupText {
+        margin-left: 0em;
+        opacity: 0;
+        transition: opacity 1s ease 
+    }
+}
+
+
+@media only screen and (max-width: 799px) and (min-width: 710px){
+    div.innerMain {
+        margin-left: 1em;
+    }
+    p.descriptionPopupText {
+        margin-left: 0em;
+        opacity: 0;
+        transition: opacity 1s ease ;
+    }
+    pre.descriptionPopupText {
+        margin-left: 0em;
+        opacity: 0;
+        transition: opacity 1s ease 
+    }
+}
+
+@media only screen and (max-width: 709px) {
+    div.innerMain {
+        margin-left: 1em;
+    }
+    p.descriptionPopupText {
+        margin-left: 0em;
+        opacity: 0;
+        transition: opacity 1s ease ;
+    }
+    pre.descriptionPopupText {
+        margin-left: 0em;
+        opacity: 0;
+        transition: opacity 1s ease 
+    }
+}

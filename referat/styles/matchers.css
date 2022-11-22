@@ -13,7 +13,7 @@ h2.head {
     font-size: 3em;
 }
 
-body p {
+body p:not(p.imageDescription) {
     margin-right: 5em;
 }
 div.gridSingleAndMargin {
@@ -39,7 +39,7 @@ div.matcherTypeImage {
     margin-bottom: 1em;
     margin-left: 30em;
     height: 25em;
-    width: 30em;
+    width: 23em;
     margin-top: 3em;
 }
 div.matcherTypeImage p {
@@ -53,7 +53,7 @@ div.matcherTypeImage2 {
     margin-bottom: 1em;
     margin-left: 30em;
     height: 10em;
-    width: 30em;
+    width: 28em;
     margin-top: 2em;
 }
 
