@@ -56,14 +56,16 @@
 
 p.noMargin {
     padding: 0px;
-    margin: 0px;
+    margin: 0px 0px 0px 0px ;
 }
 p.noMarginBottom {
     padding: 0px;
     margin-bottom: 0px;
 }
-p.underlined {
-  text-decoration: underline;
+.underlined {
+  text-decoration-line: underline;
+  text-decoration-style: solid ;
+  text-decoration-color: black;
 }
 p.bolded {
   font-weight: bold;

@@ -65,7 +65,7 @@ div.coverage {
 div.testTypeExample {
     margin-top: 2em;
     margin-bottom: 2em;
-    margin-left: 10em;
+    margin-left: 20em;
     text-align: center;
     backdrop-filter: blur(10px);
     background-color: #6deba5;
@@ -136,6 +136,23 @@ div.gridSingleAndMargin {
     }
 }
 
+
+@media only screen and (max-width: 1300px) and (min-width: 999px){
+    div.coverage img{
+        margin-left: 15em;
+    }
+    div.coverage p{ 
+        margin-left: 19em;
+    }
+    div.testTypeExample {
+        margin-left: 10em;
+        width: 30em
+    }
+    body p {
+        margin-right: 12em;
+    }
+}
+
 @media only screen and (max-width: 1000px) and (min-width: 920px){
     div.coverage img{
         margin-left: 5em;
@@ -192,7 +209,9 @@ div.gridSingleAndMargin {
         margin-left: 2em;   
     }
 }
-
+.boldInner {
+    font-weight: bold;
+}
 body p:not(p.imageDescription) {
     margin-right: 5em;
 }
