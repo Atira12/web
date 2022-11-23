@@ -43,12 +43,479 @@
       <img src="images/jest.png"  alt="Italian Trulli" />
       <p class="imageText">[1] Page Info</p>
     </div>
-    <div class="mainInfo">
-        <p class="noMarginBottom">
-        </p>
-        <p class="noMargin">
-        </p>
-    </div>
+</div>
+
+<div class="header">
+    <div class="innerMain">
+ 
+         <h2 class="head">Конфигурация</h2>
+         <p class="noMarginBottom">
+             <b>JestJS</b> системната рамка не изисква начална конфигурация, но е възможно добавянето на функционалностти чрез отделен jest.config.js или през package.json файла .
+         </p>
+         <p class="noMargin">
+             Допълнителните конфигурационни опции предоставят възможност за спецялизиране и оптимизиране на тестовата рамка.
+         </p>
+         <h3>
+             Важни системни конфигурации:
+         </h3>
+     </div>
+ </div>
+<div class="gridSingleAndMargin">
+ <ul>
+     
+     <li><p class="bolded">Тестово покритие:</p>
+         <div class="gridSingle">
+
+             <p>
+                 <b>JestJS</b> предоставя възможност за генериране и запазване на резюмирано тестово покритие за всяка папка и файл в проектното дърво.
+                 Системната рамка изчислява тестовото покритие на база броя тестови файлове и използваните тестови функции в тях. Системата предоставя резюме на 
+                 база редове , функции и гитклонове.
+             </p>
+             <div class="coverage">
+                 <img  src="images/coverage.png" alt="Italian Trulli">
+                 <p class="imageText">[1] Image info</p>
+             </div>
+             <div class="gridSingle">
+             От конфигурационните опции има няколко важни параметъра контролиращи тестовото покритие
+             <ul>
+                 <li><p class="bolded">coverageDirectory</p>
+                     <p class="innerMainPar">
+                         <b>coverageDirectory</b> може да се дефинира директория за запазване на генерираните тестови покрития. 
+                     </p>
+                 </li>
+                 <li><p class="bolded">coverageProvider</p>
+                     <p class="innerMainPar">
+                       <b>coverageProvider</b> представя възможност за конфигуриране на вида генератор на покритие. 
+                       <br/>
+                       Възможни формати са: <b>babel</b>,<b>v8</b>
+                     </p>
+                 </li>
+                 <li><p class="bolded">coverageThreshold</p>
+                     <p class="innerMainPar">
+                       <b>coverageThreshold</b> позволява на потребителя да зададе минимално ниво на покритие. Ако това ниво не е достигнато системата уведоямва с грешка.
+                     </p>
+                 </li>
+                 <li><p class="bolded">coverageReporter</p>
+                     <p class="innerMainPar">
+                       <b>coverageReporter</b> предоставя възможност за експортиране на тестовото покритие в определен формат, спомагащ за преизползване в други информационни системи. 
+                       <br/>
+                       Възможни формати са: <b>json</b>,<b>text</b>,<b>clover</b>,<b>lcov</b>
+                     </p>
+                 </li>
+             </ul>
+             </div>
+         </div>
+     </li>
+     <li><p class="bolded">Избор на тестови файлове:</p>
+         <div class="gridSingle">
+             <p>
+                 По JavaScript & Typescript стандарт всички тестови файлове трябва да са от вида:
+                 <div class="testTypeExample">
+                     <b><b style="color: red">&lt;</b>  Име <b style="color: red">.</b>  допълнителна информация <b style="color: red">.</b> test / spec <b style="color: red">.</b> ts/js  <b style="color: red">&gt;</b> </b>
+                 </div>
+                 Долу споменатите конфигурационните опции спомагат за филтрацията и подбора на тестовите файлове.
+                 <ul>
+                     <li><p class="bolded">testPathIgnorePatterns</p>
+                         <p class="innerMainPar">
+                             <b>testPathIgnorePatterns</b> позволява определени папки да бъдат игнорирани от структурното дърво, при търсене на тестови файлове. 
+                         </p>
+                     </li>
+                     <li><p class="bolded">testMatch</p>
+                         <p class="innerMainPar">
+                           <b>testMatch</b> представлява regex дефиниран формат за намиране на тестови файлове. Всеки файл отговарящ на този формат ще бъде добавен за стартиране. 
+                         </p>
+                     </li>
+                 </ul>
+             </p>
+      </div>
+     </li>
+     <li><p class="bolded">Предварителна конфигурация :</p>
+         <div class="gridSingle">
+             <p class="noMarginBottom">
+                 Възможно е при тестване да е необходимо предварителна конфигурация на тестовата среда или на части зависещи от нея.
+             </p>
+             <p class="noMargin">
+                 <b>JestJS</b> предоставя две главни опции за дефиниране на персонализирани предварителни конфигурации.
+             </p>
+              
+                 <ul>
+                     <li><p class="bolded">setupFiles</p>
+                         <p class="innerMainPar">
+                             Предоставя възможността да се добавят отделни JavaScript файлове, които биват изпълнени преди изпълнението на избраните тестови файлове.
+                             Специфицираните файлове се използват за конфигурация на тестовата среда и ще бъдат изпълнени преди <b>setupFilesAfterEnv</b>
+                         </p>
+                     </li>
+                     <li><p class="bolded">setupFilesAfterEnv</p>
+                         <p class="innerMainPar">
+                             Предоставя възможността да се добавят отделни JavaScript файлове, които биват изпълнени преди изпълнението на избраните тестови файлове.
+                             Предназначението им е да се изпълняват преди всеки тестови файл.
+                         </p>
+                     </li>
+                 </ul>
+      </div>
+     </li>
+ </ul>
+ 
 </div>
 </body>
+<div class="header">
+    <div class="innerMain">
+ 
+        <h2 class="head">Проверка на съвпаденията</h2>
+        <p>
+             Системната рамка използва ключова функция <b>expect</b> за дефиниране на нова проверка на съвпадение.  
+             За тестване на опрделена ситуация от потребителска гледна точка JestJS предоставя методи наречени "проверки на съвпадения" (Matchers). 
+        </p>
+        <p>  Този вид методи спомагат тестването на обширен брой ситуации <u>свързани с моментното състояние на уеб компонент или тяхната логика </u>.</p>
+        <p>
+            <b>JestJS</b> следи броя и позициите на провалените тестови функции <b>expect</b> и техните проверки на съвпадение. Събраната информация бива изведена в резюмирана форма след приключване.
+        </p>
+        <p>
+            <b>expect</b> приема променлива от всякакъв тип и прилага избраните от потребителя проверки за съвпадение. 
+
+        </p>
+        <h3>
+            Видове проверки на съвпадение:
+        </h3>
+    </div>
+</div>
+<div class="gridSingleAndMargin">
+    <ul>
+        <li> 
+            <div class="matcherType">
+                <h4>Често използвани</h4>
+                <p>Този вид методи се използва предимно за проверка на еквивалентност по брой проверки или състояние. </p>
+                <div>
+                    <ul>
+                        <li><b>toBe()</b>
+                            <p>
+                                Mетодът <b>toBe</b> предоставя възможност на потребителите да сравнят различни обекти по тип , референция и стойност.
+                                Този метод предимно се ползва за сравнение на примитивни типове и проверка на идентичност . Системната рамка предоставя метод <b>ToEqual</b> за обекти и други структури от данни. 
+                            </p>
+                            <p class="underlined">
+                                Методът работи на база <b>Object.is</b> 
+                            </p>
+                            <div class="matcherTypeImage">
+                                <img src="images/tobe.png"  alt="Italian Trulli" />
+                                <p class="imageDescription imageText">
+                                    <a href="https://jestjs.io/docs/expect#tobevalue" target="_blank" >[2]</a>: Примерна имплементация на toBe метод
+                                </p>
+                            </div>
+                        </li>
+                        <li><b>hasAssertions() & assertions()</b>
+                            <p class="noMarginBottom">
+                                Mетодът <b>hasAssertions()</b> предоставя възможност да се провери дали поне един <b>expect</b> тестови метод е изпълнен в дадена тестова функция.
+                            </p>
+                            <p class="noMargin">    
+                                <u>При ненамерени тестови проверки се счита теста за неуспешен</u> 
+                            </p>
+                            <p class="noMarginBottom">
+                                Подобен метод на предходния е <b>assertions()</b>, който спомага проверката на броя изпълнени  <b>expect</b> тестови метода
+                            </p>
+                            <p class="noMargin underlined">
+                                При ненамерен oпределен брой тестови проверки, теста се счита теста за неуспешен 
+                            </p>
+                            <p>
+                                Добра практика при JestJS тестване е да се използват двата метода. По този начин потребителя може да се подсигури, че всички <b>expect</b>  тестови методи 
+                                са дефинирани и изпълнени успешно 
+                            </p>
+                            <div class="matcherTypeImage1">
+                                <div>
+                                    <img src="images/assertions.png"  alt="Italian Trulli" />
+                                    <p class="imageDescription imageText">
+                                        <a href="https://jestjs.io/docs/expect#expectassertionsnumber" target="_blank" >[3]</a>: Имплементация на "assertions" метод за проверка
+                                    </p>
+                                </div>
+                                <div class="smallImage">
+                                    <img src="images/hasassertions.png"  alt="Italian Trulli" />
+                                    <p class="imageDescription imageText">
+                                        <a href="https://jestjs.io/docs/expect#expecthasassertions" target="_blank" >[4]</a>: Имплементация на "hasAssertions" метод за проверка
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li><b>toBeUndefined & toBeNull</b>
+                            <p>
+                                В <b>JavaScript</b> има дефиниционна разлика между <b>Null</b>  и <b>Undefined</b>.  
+                            </p>
+                            <p class="noMargin">
+                                За <b>Undefined</b> се счита обект, който не е дефиниран и не съществува, а ако един обект е дефиниран като <b>Null</b> той съществува, но е оприличен на празен обект. 
+                            </p>
+                            <p class="noMargin" >
+                                Mетоди <b>toBeUndefined</b> предоставя възможност да се провери дали предоставените данни са недефинирани.
+                            </p>
+                            <p>
+                                <u><b>toBeNull</b> е семантично еквивалентен на метода <b>toBe(null)</b> </u>
+                            </p>
+                            <div class="matcherTypeImage4">
+                                <div>
+                                    <img src="images/undefined.png"  alt="Italian Trulli" />
+                                    <p class="imageDescription imageText">
+                                        <a href="https://jestjs.io/docs/expect#tobenull" target="_blank" >[5]</a>: Примерна имплементация на "toBeNull" метод
+                                    </p>
+                                </div>
+                                <div class="smallImage">
+                                    <img src="images/null.png"  alt="Italian Trulli" />
+                                    <p class="imageDescription imageText">
+                                        <a href="https://jestjs.io/docs/expect#tobeundefined" target="_blank" >[6]</a>: Примерна имплементация на "toBeUndefined" метод
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li><b>not</b>
+                            <p>
+                                Подструктурата <b>not</b> се използва като прикачено отрицание към всеки метод за проверка на съвпадения.
+                            </p>
+                            <p>
+                                Всеки метод като <b>toBe</b> може да бъде конкатениран с <b>not</b> за валидиране на стойности различни от подадената.
+                            </p>
+                            <div class="matcherTypeImage2">
+                                <img src="images/not.png"  alt="Italian Trulli" />
+                                <p class="imageDescription imageText">
+                                    <a href="https://jestjs.io/docs/expect#not" target="_blank" >[7]</a>: Примерна употреба на подметод за отрицание "not" 
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="matcherType">
+                <h4>Стриктно типизирани</h4>
+                <p> 
+                    Долуспоменатите методи позволяват на потребителя да създаде проверки специално дефинирани за опеделния тип или структура данни. 
+                </p>
+                <ul>
+                    <li class="matcherTypeList">
+                        <h5>Числени проверки</h5>
+                        <p>
+                            Този тип методи са предназначени за проверка или сравнение на числени стойности.
+                            Съществуват четири основни метода от този тип. Те са еквивалентни на булевите операции 
+                            <b>&lt;</b>  &ThickSpace; <b>&gt;</b>  &ThickSpace; <b>&leq;</b> &ThickSpace; <b>&GreaterEqual;</b>  
+                        </p>
+                        <ul >
+                            <li class="functionList">
+                                <b>toBeGreaterThan</b>
+                            </li>
+                            <li class="functionList">
+                                <b>toBeGreaterThanOrEqual</b>
+                            </li>
+                            <li class="functionList">
+                                <b>toBeLessThan</b>
+                            </li>
+                            <li class="functionList">
+                                <b>toBeLessThanOrEqual</b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h5>Низови проверки</h5>
+                        <p>
+                            Съществуват три основни метода за проверка на низове. 
+                            <br/>
+                            Всеки един от тях позволява употреба на <b>regex</b> синтаксис за намиране на съответствие.
+                        </p>
+                        <ul>
+                            <li>
+                                <h5><b>toMatch</b></h5>
+                                <p class="liDescription">
+                                    Методът се използва за проверка на съществуването на определен подниз или regex в друг низ.
+                                </p>
+                            </li>
+                            <li>
+                                <h5><b>stringContaining</b></h5>
+                                <p class="noMarginBottom">
+                                    Методът се използва за проверка на съществуването на <u>стриктно</u> подадения низ в друг низ.
+                                </p>
+                                <p class="noMargin">
+                                    Работи единствено за подадени низове
+                                </p>
+                            </li>
+                            <li>
+                                <h5><b>stringMatching</b></h5>
+                                <p class="noMarginBottom">
+                                    Методът се използва за проверка на съществуването на <u>стриктно</u> подадения низ в друг низ.
+                                </p>
+                                <p class="noMargin">
+                                    Работи единствено за подадени низове
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h5>Проверки върху итерационни структури</h5>
+                        <p class="noMarginBottom">
+                            Главният методи използвани за проверка на съдържание на масив, лист и други итерационни структури е <b>toContain</b> и <b>toContainEqual</b>
+                        </p>
+                        <ul>
+                            <li>
+                                <p class="noMarginBottom">
+                                    <b>toContain</b> позволява на потребителя да провери дали подадения обект е част от определената итерационна структура.
+                                </p>
+                                <p class="noMargin underlined">
+                                    Mетодът за проверка използва тройно равенство, за да подсигури валидна типизация
+                                </p>
+                            </li>
+                            <li>
+                                <p class="noMarginBottom">
+                                    <b>toContainEqual</b> позволява на потребителя да провери наличието на подадения обект в итерационната структура.
+                                </p>
+                                <p class="noMargin underlined">
+                                    Mетодът рекурсивно минава през структурата на всеки обект и проверя за съответствия.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+</div>
+<div class="header">
+    <div class="innerMain">
+ 
+        <h2 class="head">Мокинг</h2>
+        <p class="noMarginBottom">
+            Мокингът е операция, която позволява променя и мониторира върху предоставената функция или модул.
+        </p>
+        <p class="noMargin">
+            Мокингът е предназначен за проверка на връзката между системата ни и достъпваните външни ресурси: 
+        </p>
+        <ul>
+                <li>Бази данни</li>
+                <li>Мрежово достъпни ресурси</li>
+                <li>Файлове</li>
+        </ul>
+        <p class="noMarginBottom">
+            Мокинг функционалността също може да се използва за тестване на трудно достъпна или опакована логика
+            Мокинг обектите , още наречени мок функции или "шпиони", са методи копия на предоставените функции или модули, но с гореспоменатите възможностти за промяна и наблюдение. 
+        </p>
+        <p >
+            Всяка мок функция притежава подметод <b>mock</b>, който съдържа информация кога методът е извикан и с каква имплементация. 
+        </p>
+        <p >
+            Ключови методи: 
+        </p>
+        <ul>
+            <li class="descriptionTextLi">
+                <p>fn
+                    <p class="descriptionPopupText noMarginBottom">Създава нов празен мокинг метод. При извикване на метода без предоставена имплементация ще бъде върната недефинирана стойност </p>
+                    <pre class="descriptionPopupText">const myMock1 = jest.fn();</pre>
+                    <pre class="descriptionPopupText">const a = new myMock1(); </pre>
+                    <p class="descriptionPopupText noMarginBottom">Възможно е добавянето на имплементация по подразбиране чрез подаване на параметър към мок функцията </p>
+                    <pre class="descriptionPopupText">const myMock1 = jest.fn(() => 42);</pre>
+                </p>
+            <li class="descriptionTextLi">
+                <p>mock
+                    <p class="descriptionPopupText">Подметод на всяка мок функция, съдържащ информация за имплементацията и извикването му </p>
+                    <pre class="descriptionPopupText"> myMock.mock.instances </pre>
+                </p>
+            </li>
+            <li class="descriptionTextLi">
+                <p>bind
+                    <p class="descriptionPopupText">Позволява на реален обект бъде превърнат в контекст на мокинг обект</p>
+                    <pre class="descriptionPopupText"> const b = {}</pre>
+                    <pre class="descriptionPopupText"> const mockObject = jest.fn()</pre>
+                    <pre class="descriptionPopupText"> const s = mockObject.bind(b)</pre>
+                </p>
+            </li>
+            <li class="descriptionTextLi">
+                <p>spyOn
+                    <p class="descriptionPopupText">Методът създава мок функция подобно на <b>fn</b>, но предоставя възможността за наблюдение над извикванията</p>
+                    <pre class="descriptionPopupText"> // Нека имаме модул "player" с метод "start"</pre>
+                    <pre class="descriptionPopupText"> const newSpy = jest.spyOn(player, 'start')</pre>
+                </p>
+            </li>
+        </ul>
+        <h3>
+            Видове Мокинг
+        </h3>
+        <p>
+            Долуспоменатите методи могат да бъдат ползвани единствено върху мок функции. 
+        </p>
+       
+        <ul>
+            <li>
+                <h4>
+                    Мокинг на функции
+                </h4>
+                <p class="noMarginBottom">
+                    Мокингът на функции предоставя възможността да се промени имплементацията или  изходното състояние.
+                </p>
+                <p>
+                    Изходното състояние на избрания метод може да се промени веднъж или изцяло. 
+                    Възможна е конкатенация на методи за промяна на изходното състояние при всяко извикване на избрания метод. 
+                </p>
+                <p>
+                    Често използвани методи за промяна на изход:
+                </p>
+                <ul>
+                    <li class="descriptionTextLi">
+                        <p>
+                            mockReturnValueOnce
+                        <p class="descriptionPopupText">Позицията на метода в конкатенацията дефинира на кое извикване ще бъде върната подадената стойност</p>
+                        <pre class="descriptionPopupText">myMock.mockReturnValueOnce('x').mockReturnValue(true)</pre>
+                        </p>
+                    <li class="descriptionTextLi">
+                        <p>mockReturnValue
+                        <p class="descriptionPopupText">При всяко извикване метода ще бъде върната подадената стойност </p>
+                        <pre class="descriptionPopupText"> myMock.mockReturnValue('Hello') </pre>
+                        </p>
+                    </li>
+                </ul>
+                <p class="noMarginBottom">
+                    Методите "шпиони" могат да бъгат използвани в комбинация с методи за проверка на съвпаденията. Проверките на съвпадение спомагат за тестването на системни
+                    логики при предефинирани изходни данни на вложените мок методи  
+                </p>
+            </li>
+            <li>
+                <h4>
+                    Мокинг на модули
+                </h4>
+                <p class="noMarginBottom">
+                    Мокинг функционалността също може да се използва за тестване на трудно достъпна или опакована логика.
+                </p>
+                <p>
+                    Главният метод за създаване на методи "шпиони" е <b>mock</b>. Вградената функция позволява да се създаде копие на даден модул или негова част. 
+                </p>
+                <p>
+                    Спомагателни методи:
+                </p>
+                <ul>
+                    <li class="descriptionTextLi">
+                        <p>
+                            mockImplementationOnce
+                        <p class="descriptionPopupText">Подобно на <b>mockReturnValueOnce</b>, този метод позволява да се промени имплементацията на определен модул</p>
+                        <p class="descriptionPopupText">Позицията на метода в конкатенацията дефинира на кое извикване ще бъде изпълнена предоставената имплементация</p>
+                        <pre class="descriptionPopupText">jest.mock('./method') // създаване на метод "шпионин"</pre>
+                        <pre class="descriptionPopupText">const method = require('./method') // импортиране на модул </pre>
+                        <pre class="descriptionPopupText">method.mockImplementationOnce(() => 42)</pre>
+                        </p>
+                    </li>
+                    <li class="descriptionTextLi">
+                        <p>mockImplementation
+                        <p class="descriptionPopupText"> Позволява на потребителя да подмени имплементацията на метод от мокнат модул с предоставената имплементация</p>
+                        <pre class="descriptionPopupText">jest.mock('./method') // създаване на метод "шпионин"</pre>
+                        <pre class="descriptionPopupText">const method = require('./method') // импортиране на модул </pre>
+                        <pre class="descriptionPopupText">method.mockImplementation(() => 42)</pre>
+                        </p>
+
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div class="header">
+    <div class="innerMain">
+ 
+        <h2 class="head">Използвани ресурси</h2>
+        <h3>
+            Видове проверки на съвпадение:
+        </h3>
+    </div>
+</div>
 </html>
